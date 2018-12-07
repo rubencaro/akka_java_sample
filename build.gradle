@@ -8,10 +8,14 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.typesafe.akka:akka-http_2.12:10.1.5'
+    implementation 'com.typesafe.akka:akka-stream_2.12:2.5.12'
+
     testImplementation 'junit:junit:4.12'
+    testImplementation 'com.typesafe.akka:akka-http-testkit_2.12:10.1.5'
 }
 
-mainClassName = 'java_sample.App'
+mainClassName = 'akka_java_sample.App'
 
 test {
     dependsOn "cleanTest" // force test execution
